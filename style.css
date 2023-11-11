@@ -170,7 +170,10 @@ textarea:focus {
 /* Главный экран */
 .main {
   padding-top: 7rem;
-  background: #ffffff url(assets/img/main/main-bg.jpg) center no-repeat;
+  /* background: #ffffff url(assets/img/main/main-bg.jpg) center no-repeat; */
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .main h1 {
