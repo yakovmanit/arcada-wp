@@ -27,7 +27,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-            <img src="img/main/logo.png" alt="Arkada. Строительство и монтаж">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/main/logo.png" alt="Arkada. Строительство и монтаж">
           </div>
           <div class="col-lg-5 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-0 col-sm-offset-0" id="menu-div">
             <div class="wrap">
@@ -64,11 +64,11 @@
             <h1>Каркасные<br>и кирпичные дома</h1>
             <h2>под ключ с гарантией</h2>
             <div class="main-feature">
-              <img src="img/main/icon-1@1x.png" alt="piggy">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/main/icon-1@1x.png" alt="piggy">
               <p class="main-feature-p">Цены на 20%<br>ниже конкурентов</p>
             </div>
             <div class="main-feature">
-              <img src="img/main/icon-2@1x.png" alt="clock">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/main/icon-2@1x.png" alt="clock">
               <p class="main-feature-p">Качественная работа<br>за короткий срок</p>
             </div>
           </div>
@@ -113,7 +113,7 @@
         <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="media">
             <div class="media-left">
-              <img class="media-object" src="img/features/1.png" alt="Неизменная цена">
+              <img class="media-object" src="<?php echo bloginfo('template_url'); ?>/assets/img/features/1.png" alt="Неизменная цена">
             </div>
             <div class="media-body">
               <h2 class="media-heading">Неизменная цена</h2>
@@ -125,7 +125,7 @@
         <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="media">
             <div class="media-left">
-              <img class="media-object" src="img/features/2.png" alt="Неизменная цена">
+              <img class="media-object" src="<?php echo bloginfo('template_url'); ?>/assets/img/features/2.png" alt="Неизменная цена">
             </div>
             <div class="media-body">
               <h2 class="media-heading">Команда специалистов</h2>
@@ -137,7 +137,7 @@
         <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="media">
             <div class="media-left">
-              <img class="media-object" src="img/features/3.png" alt="Неизменная цена">
+              <img class="media-object" src="<?php echo bloginfo('template_url'); ?>/assets/img/features/3.png" alt="Неизменная цена">
             </div>
             <div class="media-body">
               <h2 class="media-heading">Индивидуальный подход</h2>
@@ -163,7 +163,7 @@
         <div class="shop-cards" id="shop-cards-5">
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/5/1.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/1.jpg" alt="">
               <h3>Дом из блоков D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -173,7 +173,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/5/2.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/2.jpg" alt="">
               <h3>Дом из блоков D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -183,7 +183,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/5/3.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/3.jpg" alt="">
               <h3>Дом из блоков D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -193,7 +193,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/5/4.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/4.jpg" alt="">
               <h3>Дом из блоков D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -203,7 +203,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/5/5.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/5.jpg" alt="">
               <h3>Дом из блоков D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -213,7 +213,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/5/6.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/6.jpg" alt="">
               <h3>Дом из блоков D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -223,7 +223,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/5/7.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/7.jpg" alt="">
               <h3>Дом из блоков D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -233,7 +233,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/5/8.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/8.jpg" alt="">
               <h3>Дом из блоков D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -247,7 +247,7 @@
         <div class="shop-cards" id="shop-cards-4">
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/4/1.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/1.jpg" alt="">
               <h3>Кирпичный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -257,7 +257,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/4/2.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/2.jpg" alt="">
               <h3>Кирпичный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -267,7 +267,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/4/3.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/3.jpg" alt="">
               <h3>Кирпичный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -277,7 +277,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/4/4.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/4.jpg" alt="">
               <h3>Кирпичный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -287,7 +287,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/4/5.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/5.jpg" alt="">
               <h3>Кирпичный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -297,7 +297,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/4/6.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/6.jpg" alt="">
               <h3>Кирпичный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -307,7 +307,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/4/7.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/7.jpg" alt="">
               <h3>Кирпичный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -317,7 +317,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3.jpg" alt="">
               <h3>Кирпичный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -331,7 +331,7 @@
         <div class="shop-cards" id="shop-cards-3">
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3/1.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/1.jpg" alt="">
               <h3>Каркасный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -341,7 +341,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3/2.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/2.jpg" alt="">
               <h3>Каркасный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -351,7 +351,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3/3.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/3.jpg" alt="">
               <h3>Каркасный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -361,7 +361,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3/4.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/4.jpg" alt="">
               <h3>Каркасный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -371,7 +371,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3/5.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/5.jpg" alt="">
               <h3>Каркасный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -381,7 +381,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3/6.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/6.jpg" alt="">
               <h3>Каркасный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -391,7 +391,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3/7.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/7.jpg" alt="">
               <h3>Каркасный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -401,7 +401,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/3/8.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/8.jpg" alt="">
               <h3>Каркасный дом D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -415,7 +415,7 @@
         <div class="shop-cards" id="shop-cards-2">
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/2/1.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/1.jpg" alt="">
               <h3>Сруб D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -425,7 +425,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/2/2.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/2.jpg" alt="">
               <h3>Сруб D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -435,7 +435,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/2/3.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/3.jpg" alt="">
               <h3>Сруб D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -445,7 +445,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/2/4.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/4.jpg" alt="">
               <h3>Сруб D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -455,7 +455,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/2/5.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/5.jpg" alt="">
               <h3>Сруб D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -465,7 +465,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/2/6.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/6.jpg" alt="">
               <h3>Сруб D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -475,7 +475,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/2/7.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/7.jpg" alt="">
               <h3>Сруб D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -485,7 +485,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/2/8.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/8.jpg" alt="">
               <h3>Сруб D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -499,7 +499,7 @@
         <div class="shop-cards active" id="shop-cards-1">
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/1/1.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/1/1.jpg" alt="">
               <h3>Дом из бруса D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -509,7 +509,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/1/2.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/1/2.jpg" alt="">
               <h3>Дом из бруса D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -519,7 +519,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/1/3.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/1/3.jpg" alt="">
               <h3>Дом из бруса D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -529,7 +529,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/1/4.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/1/4.jpg" alt="">
               <h3>Дом из бруса D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -539,7 +539,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/1/5.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/1/5.jpg" alt="">
               <h3>Дом из бруса D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -549,7 +549,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/1/6.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/1/6.jpg" alt="">
               <h3>Дом из бруса D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -559,7 +559,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/1/7.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/1/7.jpg" alt="">
               <h3>Дом из бруса D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -569,7 +569,7 @@
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="shop-card">
-              <img src="img/shop/1/8.jpg" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/1/8.jpg" alt="">
               <h3>Дом из бруса D-123</h3>
               <p>Площадь 59.86 м<sup>2</sup></p>
               <span>614 000</span>
@@ -587,12 +587,12 @@
         <h2>Примеры наших работ</h2>
 
         <div class="slider_ex">
-            <img src="img/example/1.jpg" alt="">
-            <img src="img/example/2.jpg" alt="">
-            <img src="img/example/3.jpg" alt="">
-            <img src="img/example/2.jpg" alt="">
-            <img src="img/example/1.jpg" alt="">
-            <img src="img/example/3.jpg" alt="">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/1.jpg" alt="">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/2.jpg" alt="">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/3.jpg" alt="">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/2.jpg" alt="">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/1.jpg" alt="">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/3.jpg" alt="">
         </div>
 
       </div>
@@ -647,25 +647,25 @@
           <p class="upsell-desc">Наша компания выполняет весь необходимый комплекс по монтажу кровли<br>из любых материалов:</p>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="upsell-block">
-              <img src="img/upsell/1.png" alt="Металлочерепица">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/upsell/1.png" alt="Металлочерепица">
               <b>Металлочерепица</b>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="upsell-block">
-              <img src="img/upsell/2.png" alt="Мягкая гибкая черепица">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/upsell/2.png" alt="Мягкая гибкая черепица">
               <b>Мягкая гибкая черепица</b>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="upsell-block">
-              <img src="img/upsell/3.png" alt="Профнастил">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/upsell/3.png" alt="Профнастил">
               <b>Профнастил</b>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="upsell-block">
-              <img src="img/upsell/4.png" alt="Шифер">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/upsell/4.png" alt="Шифер">
               <b>Шифер</b>
             </div>
           </div>
@@ -713,7 +713,7 @@
             <div class="review-block">
               <div class="media review-avatar">
                 <div class="media-left">
-                  <img class="media-object" src="img/review/ava.png" alt="Анна Маслова">
+                  <img class="media-object" src="<?php echo bloginfo('template_url'); ?>/assets/img/review/ava.png" alt="Анна Маслова">
                 </div>
                 <div class="media-body">
                   <p class="review-avatar-name">Анна Маслова, Москва</p>
@@ -727,7 +727,7 @@
             <div class="review-block">
               <div class="media review-avatar">
                 <div class="media-left">
-                  <img class="media-object" src="img/review/ava.png" alt="Анна Маслова">
+                  <img class="media-object" src="<?php echo bloginfo('template_url'); ?>/assets/img/review/ava.png" alt="Анна Маслова">
                 </div>
                 <div class="media-body">
                   <p class="review-avatar-name">Анна Маслова, Москва</p>
@@ -741,7 +741,7 @@
             <div class="review-block">
               <div class="media review-avatar">
                 <div class="media-left">
-                  <img class="media-object" src="img/review/ava.png" alt="Анна Маслова">
+                  <img class="media-object" src="<?php echo bloginfo('template_url'); ?>/assets/img/review/ava.png" alt="Анна Маслова">
                 </div>
                 <div class="media-body">
                   <p class="review-avatar-name">Анна Маслова, Москва</p>
@@ -755,7 +755,7 @@
             <div class="review-block">
               <div class="media review-avatar">
                 <div class="media-left">
-                  <img class="media-object" src="img/review/ava.png" alt="Анна Маслова">
+                  <img class="media-object" src="<?php echo bloginfo('template_url'); ?>/assets/img/review/ava.png" alt="Анна Маслова">
                 </div>
                 <div class="media-body">
                   <p class="review-avatar-name">Анна Маслова, Москва</p>
@@ -769,7 +769,7 @@
             <div class="review-block">
               <div class="media review-avatar">
                 <div class="media-left">
-                  <img class="media-object" src="img/review/ava.png" alt="Анна Маслова">
+                  <img class="media-object" src="<?php echo bloginfo('template_url'); ?>/assets/img/review/ava.png" alt="Анна Маслова">
                 </div>
                 <div class="media-body">
                   <p class="review-avatar-name">Анна Маслова, Москва</p>
@@ -790,19 +790,19 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0">
             <div class="contacts-block">
-              <img src="img/contacts/1.png" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/contacts/1.png" alt="">
               <a class="contacts-phone" href="tel:+79106287744">+7-910-628-77-44</a>
             </div>
           </div>
           <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0">
             <div class="contacts-block">
-              <img src="img/contacts/2.png" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/contacts/2.png" alt="">
               <p>г. Рязань,<br>ул. Солнечная, 12,<br>офис 45</p>
             </div>
           </div>
           <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0">
             <div class="contacts-block">
-              <img src="img/contacts/3.png" alt="">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/contacts/3.png" alt="">
               <a href="mailto:arkada62@yandex.ru">arkada62@yandex.ru</a>
             </div>
           </div>
