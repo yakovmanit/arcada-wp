@@ -484,7 +484,7 @@
       <h2>Примеры наших работ</h2>
 
       <div class="slider_ex">
-       <!-- <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/1.jpg" alt="">
+        <!-- <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/1.jpg" alt="">
          <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/2.jpg" alt="">
         <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/3.jpg" alt=""> 
         <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/2.jpg" alt="">
@@ -517,7 +517,7 @@
 
           <!-- html-разметка, в которую мы вставляем информацию о записях -->
 
-              <img src="<?php the_field('image'); ?>" alt="">
+          <img src="<?php the_field('image'); ?>" alt="">
 
           <?php
         }
@@ -579,12 +579,12 @@
         <h2>Кровельные работы</h2>
         <p class="upsell-desc">Наша компания выполняет весь необходимый комплекс по монтажу кровли<br>из любых
           материалов:</p>
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="upsell-block">
             <img src="<?php echo bloginfo('template_url'); ?>/assets/img/upsell/1.png" alt="Металлочерепица">
             <b>Металлочерепица</b>
           </div>
-        </div>
+        </div> -->
         <!-- <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="upsell-block">
             <img src="<?php echo bloginfo('template_url'); ?>/assets/img/upsell/2.png" alt="Мягкая гибкая черепица">
@@ -605,8 +605,55 @@
         </div> -->
 
 
-        
-        
+        <?php
+
+        // выбираем записи, которые нас интересуют
+        $args = array(
+          'category_name' => 'upsell',
+          // Эта строчка була изменена с 'category'    => 0,
+          'numberposts' => 0,
+          // строчка, необходимая, чтобы выводить неограниченное кол-во записей
+          'order' => 'ASC',
+          'post_type' => 'post',
+          'suppress_filters' => true,
+          // suppression of filters of SQL query change
+        );
+
+        // помещаем записи в одну переменную $posts
+        $posts = get_posts($args);
+
+        // запускаем цикл и в нём перебираем все посты по нашим параметрам
+        foreach ($posts as $post) {
+          setup_postdata($post);
+          ?>
+
+          <!-- html-разметка, в которую мы вставляем информацию о записях -->
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="upsell-block">
+              <?php
+
+              if (has_post_thumbnail()) {
+                the_post_thumbnail();
+              } else {
+                echo "<img src='" . get_template_directory_uri() . "/assets/img/not-image.png' alt=''>";
+              }
+              ?>
+
+              <b>
+                <?php the_title(); ?>
+              </b>
+
+            </div>
+          </div>
+
+          <?php
+        }
+
+        wp_reset_postdata();
+
+        ?>
+
 
       </div>
       <p class="upsell-more">и много других материалов.</p>
