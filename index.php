@@ -176,338 +176,243 @@
       </ul>
       <!-- Дома из блоков -->
       <div class="shop-cards" id="shop-cards-5">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/1.jpg" alt="">
-            <h3>Дом из блоков D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
+
+        <?php
+
+        // выбираем записи, которые нас интересуют
+        $args = array(
+          'category_name' => 'concrete',
+          // Эта строчка була изменена с 'category'    => 0,
+          'numberposts' => 0,
+          // строчка, необходимая, чтобы выводить неограниченное кол-во записей
+          'order' => 'ASC',
+          'post_type' => 'post',
+          'suppress_filters' => true,
+          // suppression of filters of SQL query change
+        );
+
+        // помещаем записи в одну переменную $posts
+        $posts = get_posts($args);
+
+        // запускаем цикл и в нём перебираем все посты по нашим параметрам
+        foreach ($posts as $post) {
+          setup_postdata($post);
+          ?>
+
+          <!-- html-разметка, в которую мы вставляем информацию о записях -->
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="shop-card">
+              <?php
+              if (has_post_thumbnail()) {
+                the_post_thumbnail();
+              } else {
+                echo "<img src='" . get_template_directory_uri() . "/assets/img/not-image.png' alt=''>";
+              }
+              ?>
+              <h3>
+                <?php the_title(); ?>
+              </h3>
+              <p>
+                Площадь:
+                <?php the_field('area'); ?><sup>2</sup>
+              </p>
+              <span>
+                <?php the_field('old_price'); ?> грн
+              </span>
+              <b>
+                <?php the_field('new_price'); ?> грн
+              </b>
+              <button type="submit" class="popup-btn button-small">Оставить заявку</button>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/2.jpg" alt="">
-            <h3>Дом из блоков D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/3.jpg" alt="">
-            <h3>Дом из блоков D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/4.jpg" alt="">
-            <h3>Дом из блоков D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/5.jpg" alt="">
-            <h3>Дом из блоков D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/6.jpg" alt="">
-            <h3>Дом из блоков D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/7.jpg" alt="">
-            <h3>Дом из блоков D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/5/8.jpg" alt="">
-            <h3>Дом из блоков D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
+
+          <?php
+        }
+
+        wp_reset_postdata();
+
+        ?>
+
       </div>
 
       <!-- Кирпичные дома -->
       <div class="shop-cards" id="shop-cards-4">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/1.jpg" alt="">
-            <h3>Кирпичный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
+
+        <?php
+
+        // выбираем записи, которые нас интересуют
+        $args = array(
+          'category_name' => 'bricks',
+          // Эта строчка була изменена с 'category'    => 0,
+          'numberposts' => 0,
+          // строчка, необходимая, чтобы выводить неограниченное кол-во записей
+          'order' => 'ASC',
+          'post_type' => 'post',
+          'suppress_filters' => true,
+          // suppression of filters of SQL query change
+        );
+
+        // помещаем записи в одну переменную $posts
+        $posts = get_posts($args);
+
+        // запускаем цикл и в нём перебираем все посты по нашим параметрам
+        foreach ($posts as $post) {
+          setup_postdata($post);
+          ?>
+
+          <!-- html-разметка, в которую мы вставляем информацию о записях -->
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="shop-card">
+              <?php
+              if (has_post_thumbnail()) {
+                the_post_thumbnail();
+              } else {
+                echo "<img src='" . get_template_directory_uri() . "/assets/img/not-image.png' alt=''>";
+              }
+              ?>
+              <h3>
+                <?php the_title(); ?>
+              </h3>
+              <p>
+                Площадь:
+                <?php the_field('area'); ?><sup>2</sup>
+              </p>
+              <span>
+                <?php the_field('old_price'); ?> грн
+              </span>
+              <b>
+                <?php the_field('new_price'); ?> грн
+              </b>
+              <button type="submit" class="popup-btn button-small">Оставить заявку</button>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/2.jpg" alt="">
-            <h3>Кирпичный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/3.jpg" alt="">
-            <h3>Кирпичный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/4.jpg" alt="">
-            <h3>Кирпичный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/5.jpg" alt="">
-            <h3>Кирпичный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/6.jpg" alt="">
-            <h3>Кирпичный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/4/7.jpg" alt="">
-            <h3>Кирпичный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3.jpg" alt="">
-            <h3>Кирпичный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
+
+          <?php
+        }
+
+        wp_reset_postdata();
+
+        ?>
       </div>
 
       <!-- Каркасные дома -->
       <div class="shop-cards" id="shop-cards-3">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/1.jpg" alt="">
-            <h3>Каркасный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
+
+        <?php
+
+        // выбираем записи, которые нас интересуют
+        $args = array(
+          'category_name' => 'frame',
+          // Эта строчка була изменена с 'category'    => 0,
+          'numberposts' => 0,
+          // строчка, необходимая, чтобы выводить неограниченное кол-во записей
+          'order' => 'ASC',
+          'post_type' => 'post',
+          'suppress_filters' => true,
+          // suppression of filters of SQL query change
+        );
+
+        // помещаем записи в одну переменную $posts
+        $posts = get_posts($args);
+
+        // запускаем цикл и в нём перебираем все посты по нашим параметрам
+        foreach ($posts as $post) {
+          setup_postdata($post);
+          ?>
+
+          <!-- html-разметка, в которую мы вставляем информацию о записях -->
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="shop-card">
+              <?php
+              if (has_post_thumbnail()) {
+                the_post_thumbnail();
+              } else {
+                echo "<img src='" . get_template_directory_uri() . "/assets/img/not-image.png' alt=''>";
+              }
+              ?>
+              <h3>
+                <?php the_title(); ?>
+              </h3>
+              <p>
+                Площадь:
+                <?php the_field('area'); ?><sup>2</sup>
+              </p>
+              <span>
+                <?php the_field('old_price'); ?> грн
+              </span>
+              <b>
+                <?php the_field('new_price'); ?> грн
+              </b>
+              <button type="submit" class="popup-btn button-small">Оставить заявку</button>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/2.jpg" alt="">
-            <h3>Каркасный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/3.jpg" alt="">
-            <h3>Каркасный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/4.jpg" alt="">
-            <h3>Каркасный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/5.jpg" alt="">
-            <h3>Каркасный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/6.jpg" alt="">
-            <h3>Каркасный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/7.jpg" alt="">
-            <h3>Каркасный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/3/8.jpg" alt="">
-            <h3>Каркасный дом D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
+
+          <?php
+        }
+
+        wp_reset_postdata();
+
+        ?>
       </div>
 
       <!-- Сруб -->
       <div class="shop-cards" id="shop-cards-2">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/1.jpg" alt="">
-            <h3>Сруб D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
+
+        <?php
+
+        // выбираем записи, которые нас интересуют
+        $args = array(
+          'category_name' => 'blockhouse',
+          // Эта строчка була изменена с 'category'    => 0,
+          'numberposts' => 0,
+          // строчка, необходимая, чтобы выводить неограниченное кол-во записей
+          'order' => 'ASC',
+          'post_type' => 'post',
+          'suppress_filters' => true,
+          // suppression of filters of SQL query change
+        );
+
+        // помещаем записи в одну переменную $posts
+        $posts = get_posts($args);
+
+        // запускаем цикл и в нём перебираем все посты по нашим параметрам
+        foreach ($posts as $post) {
+          setup_postdata($post);
+          ?>
+
+          <!-- html-разметка, в которую мы вставляем информацию о записях -->
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="shop-card">
+              <?php
+              if (has_post_thumbnail()) {
+                the_post_thumbnail();
+              } else {
+                echo "<img src='" . get_template_directory_uri() . "/assets/img/not-image.png' alt=''>";
+              }
+              ?>
+              <h3>
+                <?php the_title(); ?>
+              </h3>
+              <p>
+                Площадь:
+                <?php the_field('area'); ?><sup>2</sup>
+              </p>
+              <span>
+                <?php the_field('old_price'); ?> грн
+              </span>
+              <b>
+                <?php the_field('new_price'); ?> грн
+              </b>
+              <button type="submit" class="popup-btn button-small">Оставить заявку</button>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/2.jpg" alt="">
-            <h3>Сруб D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/3.jpg" alt="">
-            <h3>Сруб D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/4.jpg" alt="">
-            <h3>Сруб D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/5.jpg" alt="">
-            <h3>Сруб D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/6.jpg" alt="">
-            <h3>Сруб D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/7.jpg" alt="">
-            <h3>Сруб D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="shop-card">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/shop/2/8.jpg" alt="">
-            <h3>Сруб D-123</h3>
-            <p>Площадь 59.86 м<sup>2</sup></p>
-            <span>614 000</span>
-            <b>453 820 руб.</b>
-            <button type="submit" class="popup-btn button-small">Оставить заявку</button>
-          </div>
-        </div>
+
+          <?php
+        }
+
+        wp_reset_postdata();
+
+        ?>
       </div>
 
       <!-- Дома из бруса -->
@@ -549,13 +454,14 @@
                 <?php the_title(); ?>
               </h3>
               <p>
+                Площадь:
                 <?php the_field('area'); ?><sup>2</sup>
               </p>
               <span>
-                <?php the_field('old_price'); ?>
+                <?php the_field('old_price'); ?> грн
               </span>
               <b>
-                <?php the_field('new_price'); ?>
+                <?php the_field('new_price'); ?> грн
               </b>
               <button type="submit" class="popup-btn button-small">Оставить заявку</button>
             </div>
@@ -578,12 +484,48 @@
       <h2>Примеры наших работ</h2>
 
       <div class="slider_ex">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/1.jpg" alt="">
+       <!-- <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/1.jpg" alt="">
+         <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/2.jpg" alt="">
+        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/3.jpg" alt=""> 
         <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/2.jpg" alt="">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/3.jpg" alt="">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/2.jpg" alt="">
         <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/1.jpg" alt="">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/3.jpg" alt="">
+        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/example/3.jpg" alt=""> -->
+
+
+
+        <?php
+
+        // выбираем записи, которые нас интересуют
+        $args = array(
+          'category_name' => 'examples',
+          // Эта строчка була изменена с 'category'    => 0,
+          'numberposts' => 0,
+          // строчка, необходимая, чтобы выводить неограниченное кол-во записей
+          'order' => 'ASC',
+          'post_type' => 'post',
+          'suppress_filters' => true,
+          // suppression of filters of SQL query change
+        );
+
+        // помещаем записи в одну переменную $posts
+        $posts = get_posts($args);
+
+        // запускаем цикл и в нём перебираем все посты по нашим параметрам
+        foreach ($posts as $post) {
+          setup_postdata($post);
+          ?>
+
+          <!-- html-разметка, в которую мы вставляем информацию о записях -->
+
+              <img src="<?php the_field('image'); ?>" alt="">
+
+          <?php
+        }
+
+        wp_reset_postdata();
+
+        ?>
+
       </div>
 
     </div>
@@ -643,7 +585,7 @@
             <b>Металлочерепица</b>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="upsell-block">
             <img src="<?php echo bloginfo('template_url'); ?>/assets/img/upsell/2.png" alt="Мягкая гибкая черепица">
             <b>Мягкая гибкая черепица</b>
@@ -660,7 +602,12 @@
             <img src="<?php echo bloginfo('template_url'); ?>/assets/img/upsell/4.png" alt="Шифер">
             <b>Шифер</b>
           </div>
-        </div>
+        </div> -->
+
+
+        
+        
+
       </div>
       <p class="upsell-more">и много других материалов.</p>
       <div class="row">
